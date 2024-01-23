@@ -1,6 +1,6 @@
 {
   "name": "agm-overlays-synergi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom marker overlay for the @agm/core package",
   "main": "dist/index",
   "scripts": {
@@ -56,6 +56,6 @@
     }
   },
   "dependencies": {
-    "agm-core-synergi": "^3.0.0-beta.2"
+    "agm-core-synergi": "^4.0.0"
   }
 }
