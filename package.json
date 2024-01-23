@@ -1,0 +1,61 @@
+{
+  "name": "agm-overlays-synergi",
+  "version": "1.0.1",
+  "description": "Custom marker overlay for the @agm/core package",
+  "main": "dist/index",
+  "scripts": {
+    "build": "npm-run-all build:dist:js update:dist build:example",
+    "build:dist:js": "ng-packagr -p ng-package.json",
+    "update:dist": "node scripts/update-dist-package.js",
+    "npm-publish": "npm run build && cd dist && npm publish",
+    "build:example": "ng build example --configuration=production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch",
+    "watch": "ng serve example --port 4202 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synergi-mk/agm-overlays-synergi.git"
+  },
+  "keywords": [
+    "agm",
+    "overlay",
+    "custom",
+    "markers",
+    "google",
+    "maps"
+  ],
+  "author": "Daniela Gjorgjijevska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synergi-mk/agm-overlays-synergi/issues"
+  },
+  "homepage": "https://github.com/synergi-mk/agm-overlays-synergi",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.0",
+    "@angular/cli": "^16.2.0",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/compiler-cli": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@google/markerclustererplus": "^5.0.4",
+    "@types/google.maps": "^3.53.4",
+    "js-marker-clusterer": "^1.0.0",
+    "ng-packagr": "^16.2.0",
+    "npm-run-all": "^4.1.5",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4",
+    "typescript": "^4.9.5",
+    "zone.js": "~0.13.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  },
+  "dependencies": {
+    "agm-core-synergi": "^3.0.0-beta.2"
+  }
+}
